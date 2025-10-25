@@ -4,7 +4,10 @@ A real-time sorting algorithm visualization tool built with C++ and Raylib. Watc
 
 ![Sorting Visualizer Demo](https://img.shields.io/badge/Language-C++-blue.svg)
 ![Raylib](https://img.shields.io/badge/Library-Raylib-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+## 🎥 Demo
+
+![Game Demo](demo.gif)
 
 ## ✨ Features
 
@@ -73,8 +76,7 @@ g++ main.cpp -o sorting_visualizer -lraylib -lGL -lm -lpthread -ldl -lrt -lX11
 # Windows (MinGW)
 g++ main.cpp -o sorting_visualizer.exe -lraylib -lopengl32 -lgdi32 -lwinmm
 
-# Or use the provided Makefile (if available)
-make
+# Or import into Notepad++ and run F6
 ```
 
 4. **Run the visualizer**
@@ -128,15 +130,6 @@ To adjust the speed, modify the FPS:
 SetTargetFPS(60);  // Increase for faster, decrease for slower
 ```
 
-## 🏗️ Project Structure
-
-```
-sorting-visualizer/
-├── main.cpp           # Main source file with all algorithms
-├── README.md          # This file
-└── Makefile          # Build configuration (optional)
-```
-
 ## 📚 Algorithm Details
 
 ### Bubble Sort
@@ -166,65 +159,7 @@ Non-comparison sort that counts occurrences of each value. Works efficiently for
 ## 🐛 Known Issues & Limitations
 
 - Counting Sort requires bars with heights from 0 to `WINDOWS_HEIGHT`
+- The color changes happen too fast within each frame in counting sort, and we're not giving enough time to see the comparisons and placements. 
 - Very large arrays (>200 bars) may slow down visualization
 - Static variables are used for step-by-step progression
 
-## 🤝 Contributing
-
-Contributions are welcome! Here are some ideas:
-- Add more sorting algorithms (Radix Sort, Bucket Sort, etc.)
-- Implement pause/resume functionality
-- Add speed control slider
-- Display comparison and swap counters
-- Add sound effects for operations
-
-### How to Contribute:
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/NewAlgorithm`)
-3. Commit your changes (`git commit -m 'Add Radix Sort'`)
-4. Push to the branch (`git push origin feature/NewAlgorithm`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see below for details:
-
-```
-MIT License
-
-Copyright (c) 2024
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
-## 🙏 Acknowledgments
-
-- [Raylib](https://www.raylib.com/) - Amazing game development library
-- Inspired by various sorting visualization projects
-- Algorithm explanations from classic computer science textbooks
-
-## 📧 Contact
-
-For questions or suggestions, please open an issue on GitHub.
-
----
-
-⭐ **If you find this project helpful, please consider giving it a star!** ⭐
-
-**Made with ❤️ and C++**
